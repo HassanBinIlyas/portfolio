@@ -2,6 +2,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import projects from "@/data/projectsData";
 import { PinContainer } from "@/components/ui/Pin";
+import Image from "next/image";
 
 export default function Projects() {
 
@@ -21,7 +22,7 @@ export default function Projects() {
             <PinContainer title={item.title} href={item.live}>
             
               <div className="relative flex items-center justify-center sm:w-[40rem] w-[85vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <img src={item.img} alt="cover" className="z-10 absolute bottom-0" />
+                <Image src={item.img} alt="cover" className="z-10 absolute bottom-0" width={640} height={480} />
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -40,7 +41,7 @@ export default function Projects() {
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{ transform: `translateX(-${5 * index + 2}px)` }}
                     >
-                      <img src={icon} alt="icon" className="p-2" />
+                      <Image src={icon} alt="icon" className="p-2" width={40} height={40} />
                     </div>
                   ))}
                 </div>

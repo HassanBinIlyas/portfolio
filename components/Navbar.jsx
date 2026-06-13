@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useTheme } from "@/context/ThemeContext.js";
 import { FaMoon, FaSun } from "react-icons/fa6";
+import Image from "next/image";
 
 export default function Navbar() {
     const { darkMode, setDarkMode } = useTheme();
@@ -14,10 +15,12 @@ export default function Navbar() {
             <div className="relative max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
 
                 <div className="flex items-center space-x-2">
-                    <img
+                    <Image
                         src="/logo.svg"
                         alt="Logo"
-                        className={`h-8 w-8 object-contain ${darkMode ? "text-white" : "text-black"}`}
+                        width={32}
+                        height={32}
+                        className={`${darkMode ? "text-white" : "text-black"}`}
                     />
 
                 </div>

@@ -8,7 +8,7 @@ export default function TextGenerateEffect({ words, className, extraClasses }) {
 
     useEffect(() => {
             animate("span", { opacity: 1 }, { duration: 2, delay: stagger(0.2) });
-    }, [scope.current]);
+    }, [animate]);
 
     return (
         <div className={`${className} ${extraClasses}`}>

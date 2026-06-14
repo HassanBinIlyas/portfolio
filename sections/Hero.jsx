@@ -46,13 +46,14 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4">
-            <MagicButton
-              handleClick={() => window.open("/resume.pdf", "_blank")}
-              title="Download Resume"
-              icon={<FaDownload />}
-              position="right"
-              otherClasses="bg-slate-950"
-            />
+            <a href="/resume.pdf" download="Hassan_Bin_Ilyas_Resume.pdf">
+              <MagicButton
+                title="Download Resume"
+                icon={<FaDownload />}
+                position="right"
+                otherClasses="bg-slate-950"
+              />
+            </a>
             <MagicButton
               handleClick={() =>
                 document

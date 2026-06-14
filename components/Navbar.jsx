@@ -20,7 +20,7 @@ export default function Navbar() {
                         alt="Logo"
                         width={32}
                         height={32}
-                        className={`${darkMode ? "text-white" : "text-black"}`}
+                        style={{ filter: darkMode ? "invert(1)" : "invert(0)" }}
                     />
 
                 </div>

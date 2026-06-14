@@ -4,14 +4,18 @@ import BorderCard from "@/components/ui/BorderCard";
 
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { useState } from "react";
 
 export default function Contact() {
     const { darkMode } = useTheme();
+
+    const [sending, setSending] = useState(false);
 
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setSending(true);
 
         emailjs.sendForm(
             "service_uonyn3s",
@@ -21,11 +25,14 @@ export default function Contact() {
         ).then(
             (result) => {
                 console.log("Message sent:", result.text);
+                form.current.reset();
                 alert("Message sent successfully!");
+                setSending(false);
             },
             (error) => {
                 console.log("Error:", error.text);
                 alert("Failed to send message.");
+                setSending(false);
             }
         );
     };
@@ -69,6 +76,18 @@ export default function Contact() {
                                         ? "bg-transparent border border-white/20 text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30"
                                         : "bg-transparent border border-black/20 text-black placeholder-gray-600 focus:ring-2 focus:ring-black/30"}`}
                             />
+
+                            <input
+                                required
+                                type="text"
+                                name="title"
+                                placeholder="Subject"
+                                className={`px-4 py-3 rounded-md border focus:outline-none transition
+                                    ${darkMode
+                                        ? "bg-transparent border border-white/20 text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30"
+                                        : "bg-transparent border border-black/20 text-black placeholder-gray-600 focus:ring-2 focus:ring-black/30"}`}
+                            />
+
                             <textarea
                                 required
                                 name="message"
@@ -80,16 +99,22 @@ export default function Contact() {
                                         : "bg-transparent border border-black/20 text-black placeholder-gray-600 focus:ring-2 focus:ring-black/30"}`}
                             />
 
-                            <input type="hidden" name="time" value={new Date().toLocaleString()} /> 
+                            <input
+                                type="hidden"
+                                name="time"
+                                value={new Date().toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}
+                            />
+
 
                             <button
                                 type="submit"
+                                disabled={sending}
                                 className={`py-3 rounded-md font-semibold transition
                                     ${darkMode
                                         ? "bg-white text-black hover:bg-gray-300"
                                         : "bg-black text-white hover:bg-gray-700"}`}
                             >
-                                Send Message
+                                {sending ? "Sending..." : "Send Message"}
                             </button>
 
                         </form>

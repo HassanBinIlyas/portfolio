@@ -19,10 +19,10 @@ export default function Projects() {
             className="lg:min-h-[30rem] h-[25rem] flex items-center justify-center sm:w-[40rem] w-[85vw]"
             key={item.id}
           >
-            <PinContainer title={item.title} href={item.live}>
+            <PinContainer href={item.live}>
             
               <div className="relative flex items-center justify-center sm:w-[40rem] w-[85vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <Image src={item.img} alt="cover" className="z-10 absolute bottom-0" width={640} height={480} />
+                <Image src={item.img} alt="cover" className="z-10 absolute bottom-0" width={640} height={480} priority />
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -41,7 +41,7 @@ export default function Projects() {
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{ transform: `translateX(-${5 * index + 2}px)` }}
                     >
-                      <Image src={icon} alt="icon" className="p-2" width={40} height={40} />
+                      <Image src={icon} alt="icon" className="p-2" width={40} height={40} priority />
                     </div>
                   ))}
                 </div>

@@ -5,6 +5,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "@/components/MagicButton";
 import Spotlight from "@/components/ui/Spotlight";
 import TextGenerateEffect from "@/components/ui/TextGenerateEffect";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Hero() {
   const { darkMode } = useTheme();
@@ -19,8 +20,6 @@ export default function Hero() {
         className="z-[1] left-80 top-28 h-[80vh] w-[50vw]"
         fill="blue"
       />
-
-
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
@@ -45,13 +44,11 @@ export default function Hero() {
             Hi! I'm Hassan, a Computer Science student based in Pakistan.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <a href="/resume.pdf" download="Hassan_Bin_Ilyas_Resume.pdf">
               <MagicButton
                 title="Download Resume"
                 icon={<FaDownload />}
-                position="right"
-                otherClasses="bg-slate-950"
               />
             </a>
             <MagicButton
@@ -62,12 +59,11 @@ export default function Hero() {
               }
               title="Contact Me"
               icon={<FaLocationArrow />}
-              position="right"
-              otherClasses="bg-slate-950"
             />
           </div>
         </div>
       </div>
+      <ThemeToggle  extraClasses="fixed bottom-8 right-4 md:hidden z-[9999]" />
     </section>
   );
 }

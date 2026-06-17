@@ -20,7 +20,7 @@ export default function About() {
                     <Image
                         src="/profile.png"
                         alt="Hassan"
-                        fill
+                        fill priority
                         className="object-cover"
                     />
                 </div>
@@ -43,6 +43,7 @@ export default function About() {
                                     width={25}
                                     height={25}
                                     className="mb-5"
+                                    priority
                                 />
                                 <h3 className="font-semibold text-sm mb-3">{card.title}</h3>
                                 <p className="text-xs leading-relaxed">{card.text}</p>
@@ -63,6 +64,7 @@ export default function About() {
                                         alt={tool}
                                         width={30}
                                         height={30}
+                                        priority
                                     />
                                 </div>
                             ))}

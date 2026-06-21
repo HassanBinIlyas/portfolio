@@ -8,8 +8,25 @@ import { ThemeProvider } from "../context/ThemeContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Hassan's Portfolio",
-  description: "A showcase of my projects, skills, and experience as a web developer. Explore my work and get in touch to collaborate on exciting projects.",
+  metadataBase: new URL("https://hassanbinilyas.vercel.app"),
+  title: "Hassan Bin Ilyas | Associate Software Engineer",
+  description: "Portfolio of Hassan Bin Ilyas showcasing projects, skills, and experience as an Associate Software Engineer.",
+  keywords: [
+    "Hassan Bin Ilyas",
+    "Hassan Bin Ilyas Portfolio",
+    "Hassan Bin Ilyas Software Engineer",
+    "Associate Software Engineer",
+    "Frontend Developer",
+    "Next.js Developer",
+    "React Developer",
+    "JavaScript Developer",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "Hassan Bin Ilyas" }],
+  creator: "Hassan Bin Ilyas",
 };
 
 export default function RootLayout({ children }) {

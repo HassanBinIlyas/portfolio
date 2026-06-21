@@ -27,7 +27,7 @@ export default function About() {
 
                 <div className="flex flex-col space-y-6 max-w-xl">
                     <p className="max-w-2xl mx-auto text-left leading-relaxed">
-                        I am <code>Hassan Bin Ilyas</code>, a Junior Frontend Developer passionate about learning modern frameworks
+                        I am <code>Hassan Bin Ilyas</code>, an Associate Software Engineer, passionate about learning modern frameworks
                         and building user-friendly web applications. My goal is to grow through
                         collaboration and create digital experiences that inspire.
 

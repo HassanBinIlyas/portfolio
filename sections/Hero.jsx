@@ -21,27 +21,28 @@ export default function Hero() {
         fill="blue"
       />
 
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex justify-center relative my-20 md:my-10 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p
             className={`uppercase tracking-widest text-xs text-center max-w-80 ${darkMode ? "text-[#E4ECFF]" : "text-[#0b1320]"
               }`}
           >
-            Frontend Developer & MERN Enthusiast
+            Associate Software Engineer & MERN Enthusiast
           </p>
-
-          <TextGenerateEffect
-            words="Building Clean UI and Scalable Web Apps"
-            extraClasses={`text-center text-5xl lg:text-6xl font-bold leading-[0.95] tracking-wide my-10 
+          <h1>
+            <TextGenerateEffect
+              words="Building Clean UI and Scalable Web Apps"
+              extraClasses={`text-center text-5xl lg:text-6xl font-bold leading-[0.95] tracking-wide my-10 
               ${darkMode ? "text-white" : "text-black"}
               `}
-          />
+            />
+          </h1>
 
           <p
-            className={`text-center md:tracking-tighter mb-4 text-sm md:text-lg lg:text-2xl ${darkMode ? "text-[#BEC1DD]" : "text-[#4b5563]"
+            className={`text-center md:tracking-tighter mb-10 md:mb-4 text-sm md:text-lg lg:text-2xl ${darkMode ? "text-[#BEC1DD]" : "text-[#4b5563]"
               }`}
           >
-            Hi! I'm Hassan, a Computer Science student based in Pakistan.
+            Hi! I'm Hassan Bin Ilyas, an Associate Software Engineer <br /> and Computer Science student based in Pakistan.
           </p>
 
           <div className="flex flex-col md:flex-row gap-4">
@@ -63,7 +64,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <ThemeToggle  extraClasses="fixed bottom-8 right-4 md:hidden z-[9999]" />
+      <ThemeToggle extraClasses="fixed bottom-8 right-4 md:hidden z-[9999]" />
     </section>
   );
 }

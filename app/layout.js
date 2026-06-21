@@ -27,6 +27,10 @@ export const metadata = {
   },
   authors: [{ name: "Hassan Bin Ilyas" }],
   creator: "Hassan Bin Ilyas",
+
+  verification: {
+    google: "6fc47j81YegtL9nutV6LeRkOLFLDtDptsGg9wFsCs5U",
+  },
 };
 
 export default function RootLayout({ children }) {
